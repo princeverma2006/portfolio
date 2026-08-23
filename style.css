@@ -1,0 +1,634 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    /* let the page fill the viewport */
+    width: 100%;
+    min-height: 100vh;
+    background: url("background.png") no-repeat center bottom;
+    background-size: cover; /* cover instead of contain so it fills
+                               without shrinking layout */
+    position: relative;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+
+
+/* MAIN CONTAINER */
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 70px 1fr 120px; /* Top | Middle | Bottom */
+}
+
+/* ================= TOP BAR ================= */
+.top-bar {
+    width: 100%;
+    /* fully transparent, no blur */
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    flex-wrap: wrap; /* allow items to wrap on very narrow screens */
+}
+
+
+
+.portfolio-name {
+    opacity: 0.7;
+}
+
+
+
+/* ================= CONTENT AREA ================= */
+.content-area {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* important */
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 30px;
+    overflow: hidden;
+}
+
+/* LEFT PANEL */
+.left-panel {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(0,255,255,0.2);
+    box-shadow: 0 0 20px rgba(0,255,255,0.1);
+}
+
+.profile-img {
+    width: 90px;
+    height: 90px;
+    background-image: url("profile.jpg");
+    background-size: cover;
+    margin: 0 auto 10px;
+    border-radius: 4px;
+}
+
+.username {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.player-id {
+    opacity: 0.6;
+}
+
+.season-card {
+    background: linear-gradient(45deg,#ff8c00,#ffa500);
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* CHARACTER SECTION */
+.character-section {
+    /* occupy remaining space between panels */
+    flex: 1 1 auto;
+    /* make the background image 10px taller while keeping it bottom-anchored */
+    background-size: auto calc(100% + 10px);
+    background-position: center bottom;
+    position: relative;
+}
+
+
+/* WORKS PANEL */
+.works-panel {
+    width: 500px;
+    height: auto;
+    background: rgba(20, 25, 35, 0.78);
+    padding: 20px;
+    border: 1px solid rgba(224, 171, 73, 0.55);
+    box-shadow: 0 0 30px rgba(255,165,0,0.1);
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* ================= WORK PANEL ANIMATION ================= */
+
+.works-panel {
+    transform-origin: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Collapse state */
+.works-panel.shrink {
+    transform: scale(0);
+    opacity: 0;
+}
+
+/* Expand state */
+.works-panel.expand {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.works-header {
+    padding-left: 2%;
+    font-size: 22px;
+    
+    margin-bottom: 20px;
+    width: 52%;
+    color: white;
+    letter-spacing: 1px;
+    background-color: #5a4215;
+    border: 1px solid #ffa500;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 25px;
+
+}
+
+.projects-grid {
+    padding-top: 1%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+    flex: 1;                /* take remaining height */
+    overflow-y: auto;       /* enable vertical scroll */
+    padding-right: 5px;     /* space for scrollbar */
+}
+
+.projects-grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.projects-grid::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.05);
+}
+
+.projects-grid::-webkit-scrollbar-thumb {
+    background: #ffa500;
+    border-radius: 10px;
+}
+
+.projects-grid::-webkit-scrollbar-thumb:hover {
+    background: #ff8c00;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border: 1px solid rgba(255, 145, 0, 0.822);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 145, 0, 0.822);
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.project-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.project-desc {
+    font-size: 12px;
+     height: auto;
+    margin-bottom: 10px;
+}
+
+
+
+.project-link {
+    margin-top: 10px;
+}
+
+.project-link a {
+    display: inline-block;
+    background-color: #ffffff;   /* White background */
+    padding: 6px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    margin-bottom: 5px;
+}
+
+/* Hover effect */
+.project-link a:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.view-btn {
+    background: linear-gradient(45deg,#ff8c00,#ffa500);
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.view-btn:hover {
+    box-shadow: 0 0 15px rgba(255,165,0,0.6);
+}
+
+
+/*preview modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-image {
+    width: 85%;
+    max-height: 300px;   /* Controls height */
+    object-fit: cover;   /* Keeps image clean */
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.modal-content {
+    background: #111;
+    padding: 25px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 12px;
+    position: relative;
+    animation: pop 0.3s ease;
+}
+
+.modal-body h2 {
+    margin-bottom: 10px;
+}
+
+.modal-body p {
+    margin: 10px 0;
+}
+
+.modal-body a {
+    display: inline-block;
+    margin-top: 10px;
+    background: white;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@keyframes pop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+
+/* ================= HOME SKILLS DESIGN ================= */
+
+.skills-wrapper{
+    position: relative;
+    padding-left: 1%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    padding-bottom: 2%;
+    width: 150%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.skills-wrapper .skills-center{
+    position: absolute;
+    background: none;
+    background: var(--bg-clr);
+    border-radius: 50%;
+    
+    height: 10%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.skills-wrapper .skills-center img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.skill-icon{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 7px 7px 15px rgba(0,0,0,0.2),
+                -7px -7px 15px rgba(255,255,255,0.5);
+
+    transition: all 0.5;
+    
+}
+.skill-icon img{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    
+    top: 55%;
+    left: 50%;
+    right: 2%;
+
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* When wrapper is active, icons move outward */
+
+.skills-wrapper.active .skill-icon img:nth-child(1){
+    transform: translate(-50%, -50%) translate(0, -120px);
+    opacity: 1;
+}
+
+.skills-wrapper.active .skill-icon img:nth-child(2){
+    transform: translate(-50%, -50%) translate(120px, -40px);
+    opacity: 1;
+}
+
+.skills-wrapper.active .skill-icon img:nth-child(3){
+    transform: translate(-50%, -50%) translate(80px, 80px);
+    opacity: 1;
+}
+
+.skills-wrapper.active .skill-icon img:nth-child(4){
+    transform: translate(-50%, -50%) translate(-80px, 80px);
+    opacity: 1;
+}
+
+.skills-wrapper.active .skill-icon img:nth-child(5){
+    transform: translate(-50%, -50%) translate(-120px, -40px);
+    opacity: 1;
+}
+
+
+
+
+
+
+/* RIGHT MENU */
+.right-menu {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-btn {
+    padding: 12px;
+    background: rgba(8, 17, 24, 0.616);
+    border: 1px solid #00aaff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+    letter-spacing: 1px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    
+}
+
+.menu-btn:hover {
+    background: rgba(0,150,255,0.3);
+    box-shadow: 0 0 10px #00aaff;
+}
+
+.menu-btn.active {
+    background: linear-gradient(45deg,#ff8c00,#ffa500);
+    border: none;
+}
+
+
+
+/* READY SECTION */
+.ready-section {
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 60px;
+    gap: 30px;
+}
+
+.ready-btn {
+    background: linear-gradient(45deg,#00c6ff,#1e90ff);
+    padding: 15px 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    
+}
+
+.ready-btn:hover {
+    box-shadow: 0 0 20px #00c6ff;
+}
+
+/* ================= MOBILE FULL REDESIGN ================= */
+@media (max-width: 900px) {
+
+    /* Allow page to scroll normally */
+    body {
+        overflow-x: hidden;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    /* ================= TOP BAR ================= */
+   
+.top-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+}
+
+.portfolio-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.right-hud {
+    gap: 10px;
+}
+
+.view-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+    letter-spacing: 0.5px;
+}
+
+    /* ================= CONTENT AREA ================= */
+    .content-area {
+        flex-direction: column;
+        padding: 0;
+        gap: 30px;
+    }
+
+    /* ================= HERO BACKGROUND SECTION ================= */
+    .character-section {
+    width: 100%;
+    height: 300px;
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+    /* ================= PROFILE / CONTACT CARD ================= */
+    .left-panel {
+        width: 100%;
+        padding: 0 20px;
+        order: 2;
+    }
+
+    .profile-card {
+        padding: 25px;
+        font-size: 18px;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .season-card {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    /* ================= RIGHT MENU ================= */
+    .right-menu {
+        width: 100%;
+        background: black;
+        padding: 20px;
+        gap: 20px;
+        order: 3;
+    }
+
+    .menu-btn {
+        width: 100%;
+        font-size: 18px;
+        padding: 16px;
+    }
+
+    /* ================= WORKS PANEL ================= */
+    .works-panel {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        order: 4;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* single column */
+        overflow: visible;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-thumbnail {
+        height: 120px;
+    }
+
+    .project-title {
+        font-size: 18px;
+    }
+
+    .project-desc {
+        font-size: 14px;
+    }
+
+    /* ================= READY SECTION ================= */
+    .ready-section {
+        width: 100%;
+        justify-content: center;
+        padding: 30px;
+        order: 5;
+    }
+
+    .ready-btn {
+        font-size: 18px;
+        padding: 18px 30px;
+    }
+
+    .skills-wrapper{
+    width: 100%;
+}
+}
+
+

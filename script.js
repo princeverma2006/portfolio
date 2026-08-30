@@ -12,17 +12,17 @@ function renderHome() {
     grid.innerHTML = `
         <div class="skills-wrapper">
             <div class="skills-center">
-                <img src="skill.png" alt="Skills">
+                <img src="skill.webp" alt="Skills">
             </div>
 
             <div class="skill-icon">
                 <img src="programming_lang/java.webp" alt="Java">
-                <img src="programming_lang/react.png" alt="React">
-                <img src="programming_lang/python.jpg" alt="Python">
-                <img src="programming_lang/c.png" alt="C">
-                <img src="programming_lang/c++.jpg" alt="C++">
-                <img src="programming_lang/html.png" alt="HTML">
-                <img src="programming_lang/css.jpg" alt="CSS">
+                <img src="programming_lang/react.webp" alt="React">
+                <img src="programming_lang/python.webp" alt="Python">
+                <img src="programming_lang/c.webp" alt="C">
+                <img src="programming_lang/c++.webp" alt="C++">
+                <img src="programming_lang/html.webp" alt="HTML">
+                <img src="programming_lang/css.webp" alt="CSS">
             </div>
         </div>
     `;

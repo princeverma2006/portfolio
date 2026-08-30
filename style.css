@@ -14,9 +14,8 @@ body {
     /* let the page fill the viewport */
     width: 100%;
     min-height: 100vh;
-    background: url("background.png") no-repeat center bottom;
-    background-size: cover; /* cover instead of contain so it fills
-                               without shrinking layout */
+    background: url("background.webp") no-repeat center bottom;
+    background-size: cover;
     position: relative;
     color: white;
     overflow-x: hidden;
@@ -86,7 +85,7 @@ body {
 .profile-img {
     width: 90px;
     height: 90px;
-    background-image: url("profile.jpg");
+    background-image: url("profile.webp");
     background-size: cover;
     margin: 0 auto 10px;
     border-radius: 4px;

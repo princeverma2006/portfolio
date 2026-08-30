@@ -16,6 +16,8 @@ function renderHome() {
             </div>
 
             <div class="skill-icon">
+                <img src="programming_lang/java.webp" alt="Java">
+                <img src="programming_lang/react.png" alt="React">
                 <img src="programming_lang/python.jpg" alt="Python">
                 <img src="programming_lang/c.png" alt="C">
                 <img src="programming_lang/c++.jpg" alt="C++">

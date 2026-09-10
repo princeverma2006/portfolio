@@ -173,12 +173,12 @@ body {
 }
 
 .projects-grid {
-    padding-top: 1%;
+    padding-top: 3%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 
-    flex: 1;                /* take remaining height */
+    flex: 1;              
     overflow-y: auto;       /* enable vertical scroll */
     padding-right: 5px;     /* space for scrollbar */
 }

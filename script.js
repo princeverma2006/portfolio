@@ -51,49 +51,49 @@ const contentData = {
             title: "Dev Notebook", 
             desc: "Notebook for programmers.",
             link: "https://devnotebooks.netlify.app/",
-            thumbnail: "projects/devnotebook.png"
+            thumbnail: "projects/devnotebook.webp"
         },
         { 
             title: "Bite Buzz", 
             desc: "News application for institute.",
             link: "https://bitebuzzapp.netlify.app/",
-            thumbnail: "projects/bitebuzz.jpg"
+            thumbnail: "projects/bitebuzz.webp"
         },
         { 
             title: "Food Grocery Website", 
             desc: "Fully working food grocery website.",
             link: "https://bcaspeedfood.blogspot.com/",
-            thumbnail: "projects/bcaspeedfood.jpg"
+            thumbnail: "projects/bcaspeedfood.webp"
         },
         { 
             title: "Rage keyboard (prank) Website", 
             desc: "Prank your friends",
             link: "https://rage-keyboard-pv2006.netlify.app/",
-            thumbnail: "projects/rage-keyboard.png"
+            thumbnail: "projects/rage-keyboard.webp"
         },
         { 
             title: "Password strength checker", 
             desc: "checker your password strength.",
             link: "https://password-strength-checker-pv2006.netlify.app/",
-            thumbnail: "projects/password-strength-checker.png"
+            thumbnail: "projects/password-strength-checker.webp"
         },
         { 
             title: "canvas Website", 
             desc: "Draw your imagination",
             link: "https://canvas-pv2006.netlify.app/",
-            thumbnail: "projects/canvas.png"
+            thumbnail: "projects/canvas.webp"
         },
          { 
             title: "Calculator Website", 
             desc: "working with numbers",
             link: "https://calculator-pv2006.netlify.app/",
-            thumbnail: "projects/calculator.png"
+            thumbnail: "projects/calculator.webp"
         },
         { 
             title: "StockFlow Website", 
             desc: "inventory managment system",
             link: "https://stockflow-pv2006.netlify.app/",
-            thumbnail: "projects/stockflow.png"
+            thumbnail: "projects/stockflow.webp"
         },
     ],
 
@@ -101,56 +101,56 @@ const contentData = {
        { 
         title: "Introduction to c", 
         desc: "Getting deep into c progamming",
-        thumbnail: "certificates/intro_to_c.jpg"
+        thumbnail: "certificates/intro_to_c.webp"
     },
     { 
         title: "introduction to html", 
         desc: "Beginning jurney of web development",
-        thumbnail: "certificates/intro_to_html.jpg"
+        thumbnail: "certificates/intro_to_html.webp"
     },
     { 
         title: "Web developer from scratch", 
         desc: "Learning web development from scratch",
-        thumbnail: "certificates/webdevfromscratch.jpg"
+        thumbnail: "certificates/webdevfromscratch.webp"
     },
     { 
         title: "Ethical Hacking", 
         desc: "Going deep in ethical hacking",
-        thumbnail: "certificates/itronix_hacker.jpg"
+        thumbnail: "certificates/itronix_hacker.webp"
     },
     { 
         title: "white hat hacking and penetration testing", 
         desc: "Becomming ethical hacker and tester",
-        thumbnail: "certificates/whitehat_pentester.jpg"
+        thumbnail: "certificates/whitehat_pentester.webp"
     },
     { 
         title: "Introduction to Programming", 
         desc: "Beginning jurney of progamming",
-        thumbnail: "certificates/kaggle_programming.jpg"
+        thumbnail: "certificates/kaggle_programming.webp"
     },{ 
         title: "Microsoft excel", 
         desc: "Working with microsoft excel",
-        thumbnail: "certificates/microsoft_excel.jpg"
+        thumbnail: "certificates/microsoft_excel.webp"
     },{ 
         title: "Microsoft word", 
         desc: "Working with microsoft word",
-        thumbnail: "certificates/microsoftword.jpg"
+        thumbnail: "certificates/microsoftword.webp"
     },{ 
         title: "PHP & MySQL", 
         desc: "Learning PHP & MYSQL",
-        thumbnail: "certificates/php&sql.jpg"
+        thumbnail: "certificates/php&sql.webp"
     },{ 
         title: "Introcution to python", 
         desc: "Going deep into python",
-        thumbnail: "certificates/intro-to-python.jpg"
+        thumbnail: "certificates/intro-to-python.webp"
     },{ 
         title: "Code master", 
         desc: "Participating in competition",
-        thumbnail: "certificates/code-master.jpg"
+        thumbnail: "certificates/code-master.webp"
     },{ 
         title: "Treasure hunt", 
         desc: "Participating in a competition",
-        thumbnail: "certificates/treasure-hunt.jpg"
+        thumbnail: "certificates/treasure-hunt.webp"
     },
         
     ],
